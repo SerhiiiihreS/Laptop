@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CPU.cpp" />
+    <ClCompile Include="HDD.cpp" />
+    <ClCompile Include="Laptop.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RAM.cpp" />
+    <ClCompile Include="VGA.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CPU.h" />
+    <ClInclude Include="HDD.h" />
+    <ClInclude Include="Laptop.h" />
+    <ClInclude Include="RAM.h" />
+    <ClInclude Include="VGA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
