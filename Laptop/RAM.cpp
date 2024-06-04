@@ -13,10 +13,16 @@ RAM::RAM(const char* mod, double pr) :RAM(mod)
 	price = pr;
 }
 
+RAM::RAM(const char* mod, double pr, int memr) :RAM(mod,pr)
+{
+	memory = memr;
+}
+
 RAM::~RAM()
 {
 	delete[]model;
 	price = 0;
+	memory = 0;
 }
 
 RAM::RAM(const RAM& b)
@@ -24,6 +30,7 @@ RAM::RAM(const RAM& b)
 	this->model = new char[strlen(b.model) + 1];
 	strcpy_s(this->model, strlen(b.model) + 1, b.model);
 	price = b.price;
+	memory = b.memory;
 	cout << "RAM Copy constructor\n";
 
 }
@@ -44,6 +51,14 @@ void RAM::SetPrice(double pr)
 	}
 }
 
+void RAM::SetMemory(int memr)
+{
+	if (memr > 8) {
+		memory = memr;
+	}
+
+}
+
 const char* RAM::GetModel() const
 {
 	return model;
@@ -54,8 +69,13 @@ double RAM::GetPrice() const
 	return price;
 }
 
+int RAM::GetMemory() const
+{
+	return memory;
+}
+
 void RAM::Print() const
 {
-	cout << "RAM Model - " << model << "\tPrice - " << price << endl;
+	cout << "RAM Model - " << model << "\tPrice - " << price <<"\tMemory - " << memory << endl  
 
 }
