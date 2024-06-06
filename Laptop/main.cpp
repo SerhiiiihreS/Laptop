@@ -16,4 +16,6 @@ int main()
 
 	Laptop obj("HP", obj1, obj2,obj3,obj4);
 	obj.Print();
+	Laptop::ShowNC();
+
 }

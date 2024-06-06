@@ -1,6 +1,8 @@
-#include "Laptop.h"
+﻿#include "Laptop.h"
 #include<iostream>
 using namespace std;
+
+int Laptop::NСompot = 4;
 
 Laptop::Laptop(const char* mod, HDD hdd, RAM ram, CPU cpu, VGA vga):hdd(hdd),ram(ram),cpu(cpu),vga(vga) 
 {
@@ -27,3 +29,9 @@ void Laptop::Print() const
 	this->vga.Print();
 	cout << "Laptop model -> " << model << "\tPrice - " << price << endl;
 }
+
+void Laptop::ShowNC()
+{
+	cout << "Number of components -> " << NСompot << endl; 
+}
+
