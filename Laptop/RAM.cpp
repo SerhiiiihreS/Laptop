@@ -53,8 +53,8 @@ void RAM::SetPrice(double pr)
 
 void RAM::SetMemory(int memr)
 {
-	if (memr > 8) {
-		memory = memr;
+	if ( memr>0) {
+		memory = memr; 
 	}
 
 }
@@ -76,6 +76,5 @@ int RAM::GetMemory() const
 
 void RAM::Print() const
 {
-	cout << "RAM Model - " << model << "\tPrice - " << price <<"\tMemory - " << memory << endl  
-
+	cout << "RAM Model - " << model << "\tPrice - " << price << "\tMemory - " << memory << endl;
 }

@@ -11,7 +11,7 @@ class Laptop
 	CPU cpu;
 	VGA vga;
 	double price;
-	static char* model;
+	char* model;
 public:
 	Laptop() = default;
 	Laptop(const char* mod, HDD hdd, RAM ram, CPU cpu,VGA vga);
